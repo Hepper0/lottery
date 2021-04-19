@@ -345,15 +345,20 @@ function createCard(user, isBold, id, showTable) {
 }
 
 function removeHighlight() {
-  document.querySelectorAll(".highlight").forEach(node => {
-    node.classList.remove("highlight");
+  var highlightList = document.querySelectorAll(".highlight");
   });
+  for(var node in highlightList) {
+    node.classList.remove("highlight");
+  }
 }
 
 function addHighlight() {
-  document.querySelectorAll(".lightitem").forEach(node => {
-    node.classList.add("highlight");
+   var highlightList = document.querySelectorAll(".lightitem");
   });
+  
+  for(var node in highlightList) {
+    node.classList.add("highlight");
+  }
 }
 
 /**
