@@ -10,7 +10,7 @@ import {
 } from "./prizeList";
 import { NUMBER_MATRIX } from "./config.js";
 
-const ROTATE_TIME = 3000;
+const ROTATE_TIME = 7000;
 const BASE_HEIGHT = 1080;
 
 let TOTAL_CARDS,
@@ -346,18 +346,16 @@ function createCard(user, isBold, id, showTable) {
 
 function removeHighlight() {
   var highlightList = document.querySelectorAll(".highlight");
-  });
-  for(var node in highlightList) {
-    node.classList.remove("highlight");
+  for(var i = 0; i < highlightList.length; i++) {
+    highlightList[i].classList.remove("highlight");
   }
 }
 
 function addHighlight() {
-   var highlightList = document.querySelectorAll(".lightitem");
-  });
-  
-  for(var node in highlightList) {
-    node.classList.add("highlight");
+  var highlightList = document.querySelectorAll(".lightitem");
+
+  for(var i = 0; i < highlightList.length; i++) {
+    highlightList[i].classList.add("highlight");
   }
 }
 
